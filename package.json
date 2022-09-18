@@ -1,12 +1,12 @@
 {
-  "name": "web-rich-text",
+  "name": "@pete-gi/rich-text",
   "version": "1.0.0",
   "type": "module",
   "author": "Piotr Golczyk <petegi@outlook.com>",
   "browser": "rich-text",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pete-gi/rich-text"
+    "url": "https://github.com/pete-gi/rich-text.git"
   },
   "scripts": {
     "dev": "vite",
