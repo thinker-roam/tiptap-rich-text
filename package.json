@@ -1,0 +1,49 @@
+{
+  "name": "rich-text",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tiptap/core": "^2.0.0-beta.195",
+    "@tiptap/extension-bold": "^2.0.0-beta.195",
+    "@tiptap/extension-bullet-list": "^2.0.0-beta.195",
+    "@tiptap/extension-code": "^2.0.0-beta.195",
+    "@tiptap/extension-code-block": "^2.0.0-beta.195",
+    "@tiptap/extension-code-block-lowlight": "^2.0.0-beta.195",
+    "@tiptap/extension-document": "^2.0.0-beta.195",
+    "@tiptap/extension-dropcursor": "^2.0.0-beta.195",
+    "@tiptap/extension-gapcursor": "^2.0.0-beta.195",
+    "@tiptap/extension-hard-break": "^2.0.0-beta.195",
+    "@tiptap/extension-heading": "^2.0.0-beta.195",
+    "@tiptap/extension-highlight": "^2.0.0-beta.195",
+    "@tiptap/extension-history": "^2.0.0-beta.195",
+    "@tiptap/extension-horizontal-rule": "^2.0.0-beta.195",
+    "@tiptap/extension-image": "^2.0.0-beta.195",
+    "@tiptap/extension-italic": "^2.0.0-beta.195",
+    "@tiptap/extension-link": "^2.0.0-beta.195",
+    "@tiptap/extension-list-item": "^2.0.0-beta.195",
+    "@tiptap/extension-mention": "^2.0.0-beta.195",
+    "@tiptap/extension-ordered-list": "^2.0.0-beta.195",
+    "@tiptap/extension-paragraph": "^2.0.0-beta.195",
+    "@tiptap/extension-strike": "^2.0.0-beta.195",
+    "@tiptap/extension-subscript": "^2.0.0-beta.195",
+    "@tiptap/extension-superscript": "^2.0.0-beta.195",
+    "@tiptap/extension-text": "^2.0.0-beta.195",
+    "@tiptap/extension-underline": "^2.0.0-beta.195",
+    "@tiptap/extension-youtube": "^2.0.0-beta.195",
+    "@tiptap/html": "^2.0.0-beta.195",
+    "@tiptap/suggestion": "^2.0.0-beta.195",
+    "lowlight": "^2.7.0",
+    "tippy.js": "^6.3.7"
+  },
+  "devDependencies": {
+    "ts-mixin-extended": "^1.1.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

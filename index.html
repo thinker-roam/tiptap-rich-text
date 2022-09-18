@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@webjs/rich-text</title>
+  </head>
+  <body>
+    <rich-text>
+      <template id="rich-text-plugin-dialog-hashtag">
+        <nav>
+          <ul name="options"></ul>
+        </nav>
+      </template>
+      <template id="rich-text-plugin-dialog-mention">
+        <nav>
+          <ul name="options"></ul>
+        </nav>
+      </template>
+      <template id="rich-text-plugin-dialog-link">
+        <div>
+          <label for="src">Url</label>
+          <input type="text" name="href" />
+        </div>
+        <div>
+          <button type="button" is="rich-text-plugin-dialog-cancel">
+            Cancel
+          </button>
+          <button type="button" is="rich-text-plugin-dialog-submit">
+            Submit
+          </button>
+        </div>
+      </template>
+      <template id="rich-text-plugin-dialog-link">
+        <div>
+          <label for="src">Url</label>
+          <input type="text" name="href" />
+        </div>
+        <div>
+          <button type="button" is="rich-text-plugin-dialog-cancel">
+            Cancel
+          </button>
+          <button type="button" is="rich-text-plugin-dialog-submit">
+            Submit
+          </button>
+        </div>
+      </template>
+      <template id="rich-text-plugin-dialog-image">
+        <div>
+          <label for="src">Image</label>
+          <input type="file" name="src" accept=".jpg, .jpeg, .png, .gif" />
+        </div>
+        <div>
+          <label for="alt">Title</label>
+          <input type="text" name="alt" />
+        </div>
+        <div>
+          <button type="button" is="rich-text-plugin-dialog-cancel">
+            Cancel
+          </button>
+          <button type="button" is="rich-text-plugin-dialog-submit">
+            Submit
+          </button>
+        </div>
+      </template>
+      <template id="rich-text-plugin-dialog-youtube">
+        <div>
+          <label for="src">Url</label>
+          <input type="url" name="src" />
+        </div>
+        <div>
+          <button type="button" is="rich-text-plugin-dialog-cancel">
+            Cancel
+          </button>
+          <button type="button" is="rich-text-plugin-dialog-submit">
+            Submit
+          </button>
+        </div>
+      </template>
+      <rich-text-toolbar>
+        <rich-text-plugin-hard-break></rich-text-plugin-hard-break>
+        <rich-text-plugin-dropcursor></rich-text-plugin-dropcursor>
+        <rich-text-plugin-mention></rich-text-plugin-mention>
+        <rich-text-plugin-hashtag></rich-text-plugin-hashtag>
+        <rich-text-plugin-history>
+          <button type="button" is="rich-text-plugin-handler-history-undo">
+            Undo
+          </button>
+          <button type="button" is="rich-text-plugin-handler-history-redo">
+            Redo
+          </button>
+        </rich-text-plugin-history>
+        <select is="rich-text-plugin-handler-heading">
+          <option selected disabled>Heading</option>
+          <option value="2">Heading 2</option>
+          <option value="3">Heading 3</option>
+          <option value="4">Heading 4</option>
+          <option value="5">Heading 5</option>
+          <option value="6">Heading 6</option>
+        </select>
+        <button type="button" is="rich-text-plugin-handler-paragraph">
+          Paragraph
+        </button>
+        <button type="button" is="rich-text-plugin-handler-bold">Bold</button>
+        <button type="button" is="rich-text-plugin-handler-italic">
+          Italic
+        </button>
+        <button type="button" is="rich-text-plugin-handler-underline">
+          Underline
+        </button>
+        <button type="button" is="rich-text-plugin-handler-strike">
+          Strike
+        </button>
+        <button type="button" is="rich-text-plugin-handler-code">Code</button>
+        <button type="button" is="rich-text-plugin-handler-superscript">
+          Superscript
+        </button>
+        <button type="button" is="rich-text-plugin-handler-subscript">
+          Subscript
+        </button>
+        <button type="button" is="rich-text-plugin-handler-highlight">
+          Highlight
+        </button>
+        <button type="button" is="rich-text-plugin-handler-unordered-list">
+          Unordered List
+        </button>
+        <button type="button" is="rich-text-plugin-handler-ordered-list">
+          Ordered List
+        </button>
+        <button type="button" is="rich-text-plugin-handler-codeblock">
+          CodeBlock
+        </button>
+        <button type="button" is="rich-text-plugin-handler-horizontal-rule">
+          Horizontal Rule
+        </button>
+        <button type="button" is="rich-text-plugin-handler-link">Link</button>
+        <button type="button" is="rich-text-plugin-handler-image">Image</button>
+        <button type="button" is="rich-text-plugin-handler-youtube">
+          YouTube
+        </button>
+      </rich-text-toolbar>
+      <rich-text-content>
+        <p>Hello, my name is <strong>RichText</strong>.</p>
+        <p>
+          As you can see, I'm another <em>rich-text editor</em>. So why am I
+          different?
+        </p>
+        <ul>
+          <li><p>I'm made of web-components</p></li>
+          <li><p>You don't have to initialize me, I just work</p></li>
+          <li>
+            <p>
+              Plugins that work for me, are standalone, they also don't need to
+              be initialized.
+            </p>
+          </li>
+          <li>
+            <p>
+              You will use me the way, the real web rich text editor should be
+              used - using <u>plain HTML</u>
+            </p>
+          </li>
+        </ul>
+        <p>Something other interesting things about me:</p>
+        <ul>
+          <li>
+            <p>
+              If you want to set HTML content, you do it in
+              <code>rich-text-content</code> custom-element
+            </p>
+          </li>
+          <li>
+            <p>
+              If you want to set content from JSON, to do id by passing
+              stringified value to <code>rich-text</code> (me!) custom-element
+            </p>
+          </li>
+          <li>
+            <p>
+              I can make
+              <a
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="mention"
+                href="@johnDoe"
+                >@John Doe</a
+              >
+              mentions and
+              <a
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="hashtag"
+                href="#markwallace"
+                >#markwallace</a
+              >
+              hashtags!
+            </p>
+            <ul>
+              <li>
+                <p>
+                  It's not SUPER easy to make a list of options because I'm a
+                  web-component, but you can do it by placing a
+                  <code>getItems(query)</code> method on my Mention and Hashtag
+                  plugins when importing them.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Check out the <code>main</code> file from which I export
+                  everything, to see how it works!
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>I can also</p>
+            <ul>
+              <li>
+                <p>make some</p>
+                <ul>
+                  <li><p>nested lists</p></li>
+                </ul>
+              </li>
+              <li><p>as well!</p></li>
+            </ul>
+          </li>
+        </ul>
+        <p>Try me out!</p>
+      </rich-text-content>
+    </rich-text>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
