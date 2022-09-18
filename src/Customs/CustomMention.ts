@@ -141,6 +141,7 @@ export const CustomMention = (name: string) =>
               return false;
             }
 
+            // @ts-ignore
             state.doc.nodesBetween(anchor - 1, anchor, (node, pos) => {
               if (node.type.name === this.name) {
                 isCustom = true;

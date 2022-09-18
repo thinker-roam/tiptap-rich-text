@@ -21,6 +21,7 @@ class PluginDialog extends HTMLDialogElement {
     this.setDialogStyles();
   }
 
+  // @ts-ignore
   attributeChangedCallback(attr: string) {
     if ((attr = "mode")) {
       this.setDialogStyles();
@@ -61,6 +62,7 @@ class PluginDialog extends HTMLDialogElement {
 
   public setValues() {}
 
+  // @ts-ignore
   public handle(...args: any) {}
 }
 

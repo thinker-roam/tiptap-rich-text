@@ -6,6 +6,7 @@ class YouTubePluginDialog extends PluginDialog {
   public src: string;
 
   setValues() {
+    // @ts-ignore
     this.src = this.namedFields.src.value;
   }
 

@@ -11,6 +11,7 @@ class HashtagPlugin extends createSuggestionPlugin({
   public dialogTemplateId = "rich-text-plugin-dialog-hashtag";
   public dialog: HashtagPluginDialog;
 
+  // @ts-ignore
   static async getItems(query: string) {
     return [{}];
   }

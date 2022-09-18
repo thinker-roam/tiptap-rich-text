@@ -22,6 +22,7 @@ export function GenericPluginHandler<
       }
     }
 
+    // @ts-ignore
     public open(...args: any) {
       const template: HTMLTemplateElement =
         this.richText.querySelector<HTMLTemplateElement>(
@@ -39,6 +40,7 @@ export function GenericPluginHandler<
       this.dialog.setDialogStyles();
     }
 
+    // @ts-ignore
     protected handle(...args: any) {}
   };
 }

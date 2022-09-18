@@ -6,6 +6,7 @@ class LinkPluginDialog extends PluginDialog {
   public href: string;
 
   setValues() {
+    // @ts-ignore
     this.href = this.namedFields.href.value;
   }
 

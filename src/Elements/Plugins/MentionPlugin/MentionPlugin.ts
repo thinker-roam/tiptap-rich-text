@@ -11,6 +11,7 @@ class MentionPlugin extends createSuggestionPlugin({
   public dialogTemplateId = "rich-text-plugin-dialog-mention";
   public dialog: MentionPluginDialog;
 
+  // @ts-ignore
   static async getItems(query: string) {
     return [{}];
   }

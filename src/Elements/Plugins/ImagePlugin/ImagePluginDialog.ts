@@ -8,7 +8,9 @@ class ImagePluginDialog extends PluginDialog {
   private previewUrl: string;
 
   setValues() {
+    // @ts-ignore
     this.src = this.namedFields.src.value;
+    // @ts-ignore
     this.alt = this.namedFields.alt.value;
   }
 

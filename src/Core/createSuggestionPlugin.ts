@@ -86,6 +86,7 @@ export function createSuggestionPlugin(options: SuggestionPluginOptions) {
       },
     });
 
+    // @ts-ignore
     async getItems(query: string) {
       return [{}];
     }
