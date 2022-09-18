@@ -37,8 +37,7 @@
     "@tiptap/extension-youtube": "^2.0.0-beta.195",
     "@tiptap/html": "^2.0.0-beta.195",
     "@tiptap/suggestion": "^2.0.0-beta.195",
-    "lowlight": "^2.7.0",
-    "tippy.js": "^6.3.7"
+    "lowlight": "^2.7.0"
   },
   "devDependencies": {
     "ts-mixin-extended": "^1.1.1",
