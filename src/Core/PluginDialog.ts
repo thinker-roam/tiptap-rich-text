@@ -1,4 +1,4 @@
-import { RichText } from "../main";
+import { RichText } from "..";
 import { registerPluginHandlerButton } from "./PluginHandlerButton";
 
 class PluginDialog extends HTMLDialogElement {

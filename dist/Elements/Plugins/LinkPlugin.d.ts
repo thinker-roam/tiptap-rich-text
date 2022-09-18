@@ -1,0 +1,6 @@
+import { PluginHandlerButton } from "../../Core/PluginHandlerButton";
+declare class LinkPlugin extends PluginHandlerButton {
+    plugin: import("@tiptap/core").Mark<import("@tiptap/extension-link").LinkOptions, any>;
+    handle(): void;
+}
+export { LinkPlugin };
