@@ -1,6 +1,6 @@
 {
   "name": "@pete-gi/rich-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "Piotr Golczyk <petegi@outlook.com>",
   "browser": "src/main.ts",
