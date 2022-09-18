@@ -63,12 +63,6 @@ class RichText extends HTMLElement {
       content,
     });
     this.removeAttribute("value");
-
-    this.querySelectorAll<HTMLAnchorElement>("a").forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-      });
-    });
   }
 }
 

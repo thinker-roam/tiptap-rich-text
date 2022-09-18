@@ -9,6 +9,11 @@ class RichTextContent extends HTMLElement {
 
   constructor() {
     super();
+    this.addEventListener("click", (e) => {
+      if ((e.currentTarget as HTMLElement).localName === "a") {
+        e.preventDefault();
+      }
+    });
   }
 }
 

@@ -100,6 +100,13 @@ export const CustomMention = (name: string) =>
             };
           },
         },
+        label: {
+          default: null,
+          parseHTML: (element) => element.getAttribute("label"),
+          renderHTML: () => {
+            return;
+          },
+        },
       };
     },
 

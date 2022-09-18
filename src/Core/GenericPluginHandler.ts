@@ -41,6 +41,6 @@ export function GenericPluginHandler<
     }
 
     // @ts-ignore
-    protected handle(...args: any) {}
+    public handle(...args: any) {}
   };
 }

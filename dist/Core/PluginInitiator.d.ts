@@ -8,8 +8,8 @@ declare class PluginInitiator extends HTMLElement {
     dialogTemplateId: string;
     get richText(): RichText;
     connectedCallback(): void;
-    protected open(): void;
-    protected close(): void;
+    open(): void;
+    close(): void;
 }
 declare function registerPluginHandlerBackground(name: string, constructor: CustomElementConstructor): void;
 export { PluginInitiator, registerPluginHandlerBackground };

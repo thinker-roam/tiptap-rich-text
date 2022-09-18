@@ -16,7 +16,7 @@ class PluginInitiator extends HTMLElement {
     this.richText.registerPlugin(this.plugin);
   }
 
-  protected open() {
+  public open() {
     const template: HTMLTemplateElement =
       this.richText.querySelector<HTMLTemplateElement>(
         `#${this.dialogTemplateId}`
@@ -32,7 +32,7 @@ class PluginInitiator extends HTMLElement {
     this.richText.appendChild(this.dialog);
   }
 
-  protected close() {
+  public close() {
     this.dialog.close();
     this.dialog.remove();
   }

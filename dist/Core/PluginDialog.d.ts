@@ -2,7 +2,7 @@ import { RichText } from "..";
 declare class PluginDialog extends HTMLDialogElement {
     static observedAttributes: string[];
     shadowRoot: ShadowRoot;
-    private defaultMode;
+    defaultMode: string;
     mode: "fullscreen" | "editor" | "inline";
     namedFields: Record<string, HTMLElement>;
     get richText(): RichText;

@@ -4,7 +4,7 @@ import { registerPluginHandlerButton } from "./PluginHandlerButton";
 class PluginDialog extends HTMLDialogElement {
   public static observedAttributes: string[] = ["mode"];
   public shadowRoot: ShadowRoot;
-  private defaultMode = "editor";
+  public defaultMode = "editor";
   public mode: "fullscreen" | "editor" | "inline";
   public namedFields: Record<string, HTMLElement> = {};
 

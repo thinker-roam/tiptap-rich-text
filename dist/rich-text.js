@@ -9285,11 +9285,7 @@ class Wa extends HTMLElement {
       extensions: this.extensions,
       autofocus: !0,
       content: e
-    }), this.removeAttribute("value"), this.querySelectorAll("a").forEach((t) => {
-      t.addEventListener("click", (r) => {
-        r.preventDefault();
-      });
-    });
+    }), this.removeAttribute("value");
   }
 }
 Wa.observedAttributes = ["value"];
@@ -9302,7 +9298,9 @@ class bp extends HTMLElement {
 window.customElements.define("rich-text-toolbar", bp);
 class Dp extends HTMLElement {
   constructor() {
-    super();
+    super(), this.addEventListener("click", (e) => {
+      e.currentTarget.localName === "a" && e.preventDefault();
+    });
   }
   get richText() {
     return this.closest("rich-text");
@@ -13896,6 +13894,12 @@ const gy = (n) => xe.create({
         renderHTML: (e) => e.href ? {
           href: e.href
         } : {}
+      },
+      label: {
+        default: null,
+        parseHTML: (e) => e.getAttribute("label"),
+        renderHTML: () => {
+        }
       }
     };
   },
