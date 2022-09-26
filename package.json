@@ -1,6 +1,6 @@
 {
   "name": "@pete-gi/rich-text",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "author": "Piotr Golczyk <petegi@outlook.com>",
   "browser": "dist/rich-text.js",

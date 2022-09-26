@@ -12,6 +12,15 @@ class PluginDialog extends HTMLDialogElement {
     return this.closest<RichText>("rich-text");
   }
 
+  onclose: (this: GlobalEventHandlers, ev: Event) => any = () => {
+    this.richText.content
+      .querySelectorAll<HTMLElement>("[data-dialog-anchor]")
+      .forEach((element) => {
+        element.removeAttribute("data-dialog-anchor");
+      });
+    this.remove();
+  };
+
   connectedCallback() {
     Array.from(this.querySelectorAll<HTMLElement>("[name]")).forEach(
       (field) => {
@@ -38,7 +47,7 @@ class PluginDialog extends HTMLDialogElement {
         break;
       }
       case "editor": {
-        this.style.position = "absolute";
+        this.style.position = "fixed";
         break;
       }
       case "inline": {
@@ -48,12 +57,18 @@ class PluginDialog extends HTMLDialogElement {
         const currentRect = anchorNode.getBoundingClientRect();
 
         if (currentRect) {
+          anchorNode.setAttribute("data-dialog-anchor", "");
           this.style.position = "absolute";
           this.style.right = "unset";
-          this.style.left = `${currentRect.x}px`;
-          this.style.top = `${currentRect.y + currentRect.height}px`;
+          this.style.bottom = "unset";
+          this.style.left = `${currentRect.x + window.scrollX}px`;
+          this.style.top = `${
+            currentRect.y + currentRect.height + window.scrollY
+          }px`;
         } else {
           this.close();
+          this.remove();
+          anchorNode.removeAttribute("data-dialog-anchor");
         }
         break;
       }
