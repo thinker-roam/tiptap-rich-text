@@ -101,3 +101,5 @@ typings/
 
 # TernJS port file
 .tern-port
+# for vscode plugin local history
+.history

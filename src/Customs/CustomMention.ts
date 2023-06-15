@@ -1,6 +1,6 @@
 import { mergeAttributes, Node } from "@tiptap/core";
 import Suggestion, { SuggestionOptions } from "@tiptap/suggestion";
-import { Node as ProseMirrorNode } from "prosemirror-model";
+import { Node as ProseMirrorNode } from "@tiptap/pm/model";
 
 export type CustomOptions = {
   HTMLAttributes: Record<string, any>;

@@ -1,5 +1,5 @@
 import { Node, Range } from "@tiptap/core";
-import { PluginKey } from "prosemirror-state";
+import { PluginKey } from "@tiptap/pm/state";
 import { CustomMention, CustomOptions } from "../Customs/CustomMention";
 import { SuggestionProps } from "@tiptap/suggestion";
 import { PluginInitiator } from "./PluginInitiator";
